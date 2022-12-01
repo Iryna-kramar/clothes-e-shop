@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "cardigan",
+    "price": 1600,
+    "imgUrl": "/pics/cardigan.jpg"
+  },
+  {
+    "id": 2,
+    "name": "pants",
+    "price": 1100,
+    "imgUrl": "/pics/pants.jpg"
+  },
+  {
+    "id": 3,
+    "name": "dress",
+    "price": 1300,
+    "imgUrl": "/pics/dress.avif"
+  },
+  {
+    "id": 4,
+    "name": "sneakers",
+    "price": 4000,
+    "imgUrl": "/pics/sneakers.avif"
+  },
+  {
+    "id": 5,
+    "name": "T-shirt",
+    "price": 800,
+    "imgUrl": "/pics/T-shirt.avif"
+  }
+]
