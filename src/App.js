@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Container className="mb-4">
         <Routes>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </Container>
-    </div>
+    </>
   );
 }
 
