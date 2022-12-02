@@ -1,9 +1,19 @@
 import React, { useState, createContext } from "react";
+import ShoppingCart from "../components/ShoppingCart";
 
 const ShoppingCartContext = createContext();
 
 const ShoppingCartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const cartQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  );
+
+  const openCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
 
   const getItemQuantity = (id) => {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
@@ -54,9 +64,14 @@ const ShoppingCartProvider = ({ children }) => {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
+        cartItems,
+        cartQuantity,
+        openCart,
+        closeCart,
       }}
     >
       {children}
+      <ShoppingCart isOpen={isOpen} />
     </ShoppingCartContext.Provider>
   );
 };

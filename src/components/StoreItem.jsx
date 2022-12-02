@@ -49,9 +49,7 @@ const StoreItem = ({ id, name, price, imgUrl }) => {
                 <Button onClick={() => removeFromCart(id)} variant="danger">
                   Remove
                 </Button>
-                Hi
               </div>
-              Bye
             </div>
           )}
         </div>
